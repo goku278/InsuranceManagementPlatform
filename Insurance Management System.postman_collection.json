@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "149d9482-488c-4055-9336-d2b546a2911d",
+		"name": "Insurance Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "Create Client Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Sneha\",\r\n    \"dob\" : \"12-12-2012\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/clients"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Clients Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/clients"
+					},
+					"response": []
+				},
+				{
+					"name": "Get A secific Client",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/clients/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Clients Data",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"street\" : \"AMERICA\",\r\n    \"city\" : \"PARIS\",\r\n    \"district\" : \"Azaral\",\r\n    \"zipCode\" : \"7881017\",\r\n    \"state\" : \"Assam\",\r\n    \"country\" : \"India\",\r\n    \"phNo\" : \"9101058634\",\r\n    \"email\" : \"client2@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/clients/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete A Client",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/clients/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Issue A Policy",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Policy",
+			"item": [
+				{
+					"name": "Create A New Policy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"policyNumber\" : \"1234567\",\r\n    \"policyType\" : \"Health Insurance Policy\",\r\n    \"coverageAmount\" : \"5 crore\",\r\n    \"premium\" : \"ICICI LOMBARD HEALTH INSURANCE\",\r\n    \"startDate\" : \"01-02-2021\",\r\n    \"endDate\" : \"01-04-2070\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/policies"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Policies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/policies"
+					},
+					"response": []
+				},
+				{
+					"name": "Get A Policy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/policies/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Update A Policy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"policyNumber\" : \"12345\",\r\n    \"policyType\" : \"Health Insurance\",\r\n    \"coverageAmount\" : \"1 crore\",\r\n    \"premium\" : \"ICICI HEALTH INSURANCE\",\r\n    \"startDate\" : \"01-02-2021\",\r\n    \"endDate\" : \"01-04-2025\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/policies/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete A Policy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/policies/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Issue A Claim",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Claims",
+			"item": [
+				{
+					"name": "Create Claims",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"claimNumber\" : \"12345\",\r\n    \"description\" : \"Health Insurance Claim\",\r\n    \"claimDate\" : \"01-04-2021\",\r\n    \"claimStatus\" : \"Approved\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/claims"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Claims",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/claims"
+					},
+					"response": []
+				},
+				{
+					"name": "Get A Claim",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/claims/152"
+					},
+					"response": []
+				},
+				{
+					"name": "Update A Claim",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"claimNumber\" : \"12245\",\r\n    \"description\" : \"Health Insurance Claim\",\r\n    \"claimDate\" : \"01-04-2025\",\r\n    \"claimStatus\" : \"Approved\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/claims/152"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete A Claim",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/claims/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JwtToken",
+			"item": [
+				{
+					"name": "Generate Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"testABC\",\r\n    \"password\": \"test123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/token"
+					},
+					"response": []
+				},
+				{
+					"name": "Validate Jwt Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0QUJDIiwiZXhwIjoxNjgwMzgyNzA3LCJpYXQiOjE2ODAzNjQ3MDd9.qr7W0GSC82C7uBYFZNh6XG18VA1DGO4g1TTnPfRkAx3YbPlazkivPBE6sRNjNNwhTeb0pHBTixF9YdotFa662Q"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0QUJDIiwiZXhwIjoxNjgwMzgyNzA3LCJpYXQiOjE2ODAzNjQ3MDd9.qr7W0GSC82C7uBYFZNh6XG18VA1DGO4g1TTnPfRkAx3YbPlazkivPBE6sRNjNNwhTeb0pHBTixF9YdotFa662Q\",\r\n    \"name\": \"testABC\",\r\n    \"password\": \"test123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/validateToken"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
